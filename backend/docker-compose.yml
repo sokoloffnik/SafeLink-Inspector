@@ -1,0 +1,26 @@
+version: "3.8"
+
+services:
+  app:
+    build:
+      context: ./app
+    container_name: safelink-backend
+    expose:
+      - "8000"
+    restart: unless-stopped
+
+  caddy:
+    image: caddy:latest
+    container_name: safelink-proxy
+    restart: unless-stopped
+    ports:
+      - "8080:80"
+      - "9443:443"
+    volumes:
+      - ./Caddyfile:/etc/caddy/Caddyfile
+      - caddy_data:/data
+      - caddy_config:/config
+
+volumes:
+  caddy_data:
+  caddy_config:

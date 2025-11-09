@@ -1,0 +1,8 @@
+{
+    email u.sokoloff@gmail.com
+ }
+
+kvazilliano.online {
+    encode gzip
+    reverse_proxy safelink-backend:8000
+}

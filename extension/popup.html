@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <title>SafeLink Inspector</title>
+    <style>
+      body {
+        font-family: Arial, sans-serif;
+        margin: 16px;
+        width: 250px;
+      }
+      .status {
+        display: flex;
+        align-items: center;
+        margin-bottom: 10px;
+      }
+      .status img {
+        width: 24px;
+        height: 24px;
+        margin-right: 10px;
+      }
+      .status span {
+        font-size: 14px;
+      }
+      .note {
+        font-size: 12px;
+        color: gray;
+        margin-top: 12px;
+      }
+    </style>
+  </head>
+  <body>
+    <h3>SafeLink Inspector</h3>
+    <p>Link scanning is performed automatically.</p>
+
+    <div class="status">
+      <img src="icons/icon_ok.png" alt="Clean" />
+      <span>Link is safe</span>
+    </div>
+    <div class="status">
+      <img src="icons/icon_alert.png" alt="Dangerous" />
+      <span>Threats detected</span>
+    </div>
+    <div class="status">
+      <img src="icons/icon_pending.png" alt="Pending" />
+      <span>Result is being processed</span>
+    </div>
+    <div class="status">
+      <img src="icons/icon_128.png" alt="Unknown" />
+      <span>Unable to determine</span>
+    </div>
+
+    <div class="note">
+      🔄 The icon updates each time you navigate to a new page.
+    </div>
+  </body>
+</html>
